@@ -31,11 +31,7 @@ public class MainActivity extends AppCompatActivity {
         catch(ExecutionException |InterruptedException e){
             e.printStackTrace();
         }
-        for(int i=0; i<list.size();i++){
-            Log.d("Afterlogin:", list.get(i).getLogin());
-            Log.d("AfterType:", list.get(i).getType());
-            Log.d("AfterUrl:", list.get(i).getUrl());
-        }
+       
         mAdapter = new users_adapter(list);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
